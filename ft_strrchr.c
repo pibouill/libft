@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 14:16:40 by pibouill         ###   ########.fr       */
+/*   Created: 2023/10/17 14:06:09 by pibouill          #+#    #+#             */
+/*   Updated: 2023/10/17 14:19:18 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <stddef.h>
-# include <string.h>
+char	*ft_strrchr(const char *s, int c)
+{
+	while (*s)
+		s++;
+	while (--s)
+	{
+		if (*s == c)
+			return ((char *)s);
+	}
+	return (NULL);
+}
 
-int	ft_isdigit(int c);
-int	ft_isalpha(int c);
-int	ft_isalnum(int c);
-size_t	ft_strlen(const char *s);
-
-#endif
+int	main()
+{
+	char	str[] = "je suis une test fds fsd fd";
+	printf("%s\n", ft_strrchr(str, 'e'));
+	return (0);
+}
