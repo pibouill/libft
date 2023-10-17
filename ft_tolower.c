@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 11:23:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 12:27:04 by pibouill         ###   ########.fr       */
+/*   Created: 2023/10/17 13:37:05 by pibouill          #+#    #+#             */
+/*   Updated: 2023/10/17 13:37:45 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// void	*ft_memset(void *s, int c, size_t n)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while()
-// }
+int	ft_tolower(int c)
+{
+	if (ft_isalpha(c) && (c >= 65 && c <= 90))
+		return (c + 32);
+	return (c);
+}
