@@ -1,35 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 14:06:09 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 16:19:21 by pibouill         ###   ########.fr       */
+/*   Created: 2023/10/17 17:14:34 by pibouill          #+#    #+#             */
+/*   Updated: 2023/10/17 17:14:46 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
-{
-	int	i;
 
-	i = ft_strlen(s);
-	while (i >= 0)
-	{
-		if (s[i] == (unsigned char) c)
-			return ((char *)(s + i));
-		i--;
-	}
-	return (NULL);
-}
-
-// int	main()
-// {
-// 	char	str[] = "fndsfl";
-// 	printf("%s\n", ft_strrchr(str, 'e'));
-// 	printf("%s\n", strrchr(str, 'e'));
-// 	return (0);
-// }

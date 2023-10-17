@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 14:06:09 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 16:19:21 by pibouill         ###   ########.fr       */
+/*   Created: 2023/10/17 16:27:59 by pibouill          #+#    #+#             */
+/*   Updated: 2023/10/17 17:07:08 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
+	size_t	src_len;
+	size_t	dest_len;
+	size_t	i;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	i = 0;
+	dest_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (size <= dest_len)
+		return (size + src_len);
+	while (src[i] && (dest_len + i) < (size - 1))
 	{
-		if (s[i] == (unsigned char) c)
-			return ((char *)(s + i));
-		i--;
+		dst[dest_len + i] = src[i];
+		i++;
 	}
-	return (NULL);
+	dst[dest_len + i] = '\0';
+	return (dest_len + src_len);
 }
-
-// int	main()
-// {
-// 	char	str[] = "fndsfl";
-// 	printf("%s\n", ft_strrchr(str, 'e'));
-// 	printf("%s\n", strrchr(str, 'e'));
-// 	return (0);
-// }

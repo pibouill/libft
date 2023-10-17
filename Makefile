@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/17 14:51:01 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/17 17:07:22 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,14 @@ SRCS 		= 	ft_isalnum\
 				ft_strrchr\
 				ft_tolower\
 				ft_toupper\
+				ft_memset\
+				ft_strchr\
+				ft_strlcat\
+				ft_strlcpy\
+				ft_strncmp\
+				ft_strnstr\
+				ft_atoi\
+
 
 SRC				= $(addsuffix .c, $(SRCS))
 OBJ 			= $(addsuffix .o, $(SRCS))

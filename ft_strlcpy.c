@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 14:06:09 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 16:19:21 by pibouill         ###   ########.fr       */
+/*   Created: 2023/10/17 16:26:35 by pibouill          #+#    #+#             */
+/*   Updated: 2023/10/17 16:35:54 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
+	size_t	i;
+	size_t	count;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	i = 0;
+	count = 0;
+	while (src[count])
+		count++;
+	if (size == 0)
+		return (count);
+	while (src[i] && i < (size - 1))
 	{
-		if (s[i] == (unsigned char) c)
-			return ((char *)(s + i));
-		i--;
+		dst[i] = src[i];
+		i++;
 	}
-	return (NULL);
+	dst[i] = '\0';
+	return (count);
 }
-
-// int	main()
-// {
-// 	char	str[] = "fndsfl";
-// 	printf("%s\n", ft_strrchr(str, 'e'));
-// 	printf("%s\n", strrchr(str, 'e'));
-// 	return (0);
-// }
