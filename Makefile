@@ -6,15 +6,15 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/17 11:14:51 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/17 14:51:01 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libft.a
-DIRS		= libft
-CC			= gcc
+CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
 RM 			= rm
+INC			= libft.h
 AR 			= ar rc
 # **************************************************************************** #
 # COLORS
@@ -31,6 +31,13 @@ SRCS 		= 	ft_isalnum\
 				ft_isalpha\
 				ft_isascii\
 				ft_isdigit\
+				ft_isprint\
+				ft_memset\
+				ft_strchr\
+				ft_strlen\
+				ft_strrchr\
+				ft_tolower\
+				ft_toupper\
 
 SRC				= $(addsuffix .c, $(SRCS))
 OBJ 			= $(addsuffix .o, $(SRCS))
@@ -43,9 +50,9 @@ $(NAME): $(OBJ)
 	@$(AR) $(NAME) $(OBJ)
 	@echo "$(GREEN)$(NAME) compiled. $(DEF_COLOR)"
 
-$(BIN_DIR)/%.o: $(SRC_DIR)/%.c Makefile | $(BIN_DIR)
-	@$(CC) -c $(CFLAGS) -I $(INC_DIR) $< -o $@
-	@echo "$(BLUE)Compiling... $(notdir $<) in $(DIRS) $(END_COLOR)"
+%.o: %.c
+	@$(CC) -c $(CFLAGS) -I $(INC) $< -o $@
+	@echo "$(BLUE)Compiling... $< $(END_COLOR)"
 
 clean:
 	@rm -rf $(OBJ)
