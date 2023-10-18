@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:36:35 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 17:03:59 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:33:43 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	while ((*nptr == ' ') || (*nptr >= 9 && *nptr <= 13))
 		nptr++;
-	while (*nptr == '+' || *nptr == '-')
+	if (*nptr == '+' || *nptr == '-')
 	{
-		if (*nptr == '-')
-			sign = -1;
+		if ((*nptr + 1) == '+' || (*nptr + 1) == '-')
+			return (0);
 		nptr++;
 	}
 	while (*nptr >= '0' && *nptr <= '9')
@@ -37,7 +37,7 @@ int	ft_atoi(const char *nptr)
 
 // int	main()
 // {
-// 	char	str[] = "		jdifjisfjidosji";
+// 	char	str[] = "		-+42jdifjisfjidosji";
 // 	printf("%d\n", ft_atoi(str));
 // 	printf("%d\n", atoi(str));
 // 	return (0);

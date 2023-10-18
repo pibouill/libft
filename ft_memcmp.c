@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 11:23:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/18 15:11:18 by pibouill         ###   ########.fr       */
+/*   Created: 2023/10/18 15:12:02 by pibouill          #+#    #+#             */
+/*   Updated: 2023/10/18 15:24:23 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
+	unsigned char	*str1;
+	unsigned char	*str2;
 	size_t			i;
-	unsigned char	*str;
 
+	str1 = (unsigned char *) s1;
+	str2 = (unsigned char *) s2;
 	i = 0;
-	str = (unsigned char *) s;
-	while (i++ < n)
-		str[i] = c;
-	return (str);
+	while (i < n - 1 && str1[i])
+	{
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
+	}
+	return (str1[i] - str2[i]);
 }
 
 // int	main()
 // {
-// 	char	str[100];
-// 	char	str2[100];
+// 	char	str[] = "test string";
+// 	char	str2[] = "test stringt";
 
-// 	ft_memset(str, 'o', 20);
-// 	memset(str2, 'o', 20);
-// 	printf("%s\n", str);
-// 	printf("%s\n", str2);
+// 	printf("result of comparison is: %i\n", ft_memcmp(str, str2, 12));
+// 	printf("result of comparison is: %i\n", memcmp(str, str2, 12));
 // 	return (0);
 // }
