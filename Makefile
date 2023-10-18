@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/17 17:07:22 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/18 16:41:17 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,13 @@ SRCS 		= 	ft_isalnum\
 				ft_strncmp\
 				ft_strnstr\
 				ft_atoi\
+				ft_calloc\
+				ft_bzero\
+				ft_memchr\
+				ft_memcmp\
+				ft_memcpy\
+				ft_memmove\
+				ft_strdup\
 
 
 SRC				= $(addsuffix .c, $(SRCS))
