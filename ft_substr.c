@@ -1,48 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 16:36:35 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/18 18:35:40 by pibouill         ###   ########.fr       */
+/*   Created: 2023/10/18 16:43:46 by pibouill          #+#    #+#             */
+/*   Updated: 2023/10/18 16:59:14 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	ret;
-	int	sign;
+	char			*new;
+	unsigned int	i;
 
-	ret = 0;
-	sign = 1;
-	while ((*nptr == ' ') || (*nptr >= 9 && *nptr <= 13))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	i = 0;
+	new = malloc(sizeof(char) * len + 1);
+	if (new == NULL)
+		return (NULL);
+	while (i < len && s[start + i])
 	{
-		if (*nptr == '-')
-		{
-			sign = -1;
-			nptr++;
-		}
-		else if (*nptr == '+')
-			nptr++;
+		new[i] = s[start + i];
+		i++;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		ret = ret * 10 + *nptr - '0';
-		nptr++;
-	}
-	return (ret * sign);
+	new[i] = '\0';
+	return (new);
 }
 
 // int	main()
 // {
-// 	char	str[] = "		+--+42jdifj5i";
-// 	printf("%d\n", ft_atoi(str));
-// 	printf("%d\n", atoi(str));
+// 	char	str[] = "im a big string";
+
+// 	printf("%s\n", ft_substr(str, 5, 5));
 // 	return (0);
 // }
