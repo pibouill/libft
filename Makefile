@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/19 14:16:02 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/19 17:00:29 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,6 +87,10 @@ fclean: clean
 
 re: fclean all
 	@echo "$(GREEN)Cleaned all and rebuilt $(NAME)$(END_COLOR)"
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 # **************************************************************************** #
 # PHONY

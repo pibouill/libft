@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:59:22 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 12:33:16 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/19 16:41:19 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	new = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
+	new = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (new == NULL)
 		return (NULL);
 	while (s1[i])

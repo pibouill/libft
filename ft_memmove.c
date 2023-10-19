@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:27:32 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/18 16:42:48 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/19 16:54:21 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	r_dest = (unsigned char *)dest;
 	r_src = (unsigned char *)src;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	if (r_src < r_dest)
 	{
 		while (n-- > 0)

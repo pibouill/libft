@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:37:23 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 14:46:02 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:15:06 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		tmp *= -1;
 	res = malloc(sizeof(char) * (len + 1));
+	if (res == NULL)
+		return (NULL);
 	res[len] = 0;
 	if (tmp == 0)
 		res[0] = '0';

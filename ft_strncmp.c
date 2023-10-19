@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:32:03 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 15:37:58 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/19 16:17:43 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (s1[i] && i < n - 1)
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 // int	main()
 // {
-// 	char	str[] = "rewrew";
-// 	char	str2[] = "rewrere";
-// 	printf("%i\n", ft_strncmp(str, str2, 10));
-// 	printf("%i\n", strncmp(str, str2, 10));
+// 	char	str[] = "test\0";
+// 	char	str2[] = "test\200";
+// 	printf("%i\n", ft_strncmp(str, str2, 6));
+// 	printf("%i\n", strncmp(str, str2, 6));
 // 	return (0);
 // }

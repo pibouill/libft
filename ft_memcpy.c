@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 10:36:34 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/18 16:42:07 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/19 16:54:02 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	c_dst = (char *)dest;
 	c_src = (char *)src;
 	i = 0;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		c_dst[i] = c_src[i];
