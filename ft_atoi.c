@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:36:35 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/18 18:35:40 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:11:36 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ int	ft_atoi(const char *nptr)
 	return (ret * sign);
 }
 
-// int	main()
-// {
-// 	char	str[] = "		+--+42jdifj5i";
-// 	printf("%d\n", ft_atoi(str));
-// 	printf("%d\n", atoi(str));
-// 	return (0);
-// }
+	// int	main()
+	// {
+	// 	char	str[] = "		+--+42jdifj5i";
+	// 	printf("%d\n", ft_atoi(str));
+	// 	printf("%d\n", atoi(str));
+	// 	return (0);
+	// }
