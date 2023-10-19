@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:37:23 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 14:14:01 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:46:02 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_itoa(int n)
 		while (len-- && tmp != 0)
 		{
 			res[len] = (tmp % 10) + '0';
-			tmp = (tmp - (tmp % 10)) / 10;
+			tmp /= 10;
 		}
 		if (n < 0)
 			res[len] = '-';
@@ -58,6 +58,6 @@ char	*ft_itoa(int n)
 
 // int	main()
 // {
-// 	printf("%s\n", ft_itoa(INT_MIN));
+// 	printf("%s\n", ft_itoa(-5435));
 // 	return (0);
 // }
