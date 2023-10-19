@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/19 11:51:18 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/19 12:31:00 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,12 @@ SRCS 		= 	ft_isalnum\
 				ft_substr\
 				ft_strjoin\
 				ft_strtrim\
+				ft_putchar_fd\
+				ft_putstr_fd\
+				ft_putendl_fd\
+				ft_putnbr_fd\
+
+
 
 SRC				= $(addsuffix .c, $(SRCS))
 OBJ 			= $(addsuffix .o, $(SRCS))
