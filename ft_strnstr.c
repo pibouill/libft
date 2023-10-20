@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:01:16 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 16:25:54 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:04:08 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (little[j] == big[i + j] && (i + j) < len)
 		{
 			if (little[j + 1] == '\0')
-			{
 				return ((char *)big + i);
-			}
 			j++;
 		}
 		i++;
@@ -40,7 +38,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 // {
 // 	char	big[] = "im am the haystack";
 // 	char	little[] = "hay";
-// 	printf("%s\n", ft_strnstr(big, little, 19));
-// 	printf("%s\n", strnstr(big, little, 19));
+// 	printf("%s\n", ft_strnstr(big, little, -1));
+// 	printf("%s\n", strnstr(big, little, -1));
 // 	return (0);
 // }

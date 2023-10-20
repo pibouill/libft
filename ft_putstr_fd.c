@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:01:54 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 12:32:36 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/20 14:00:45 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	write(fd, s, i);
+	if (s == NULL)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
