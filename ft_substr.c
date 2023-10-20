@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:43:46 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 17:16:22 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:56:41 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 
 	i = 0;
-	if (start >= ft_strlen(s))
+	if (start > ft_strlen(s))
 		return (ft_strdup(""));
-	new = malloc(sizeof(char) * len + 1);
+	new = malloc(sizeof(char) * (len + 1));
 	if (new == NULL)
 		return (NULL);
 	while (i < len && s[start + i])

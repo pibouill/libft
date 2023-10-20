@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:59:22 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 16:41:19 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:51:21 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s1[i])
 		new[j++] = s1[i++];
 	i = 0;
-	while (s1[i])
+	while (s2[i])
 		new[j++] = s2[i++];
 	new[j] = '\0';
 	return (new);
