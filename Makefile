@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/19 17:00:29 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/20 17:41:51 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ SRCS 		= 	ft_isalnum\
 				ft_memcmp\
 				ft_memcpy\
 				ft_memmove\
+				ft_memset\
 				ft_strdup\
 				ft_substr\
 				ft_strjoin\
