@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 13:27:45 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 14:02:34 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,11 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	**ft_split(char const *s, char c);
+
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+
 
 #endif

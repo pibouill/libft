@@ -1,45 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 18:05:43 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 13:38:15 by pibouill         ###   ########.fr       */
+/*   Created: 2023/10/22 13:35:12 by pibouill          #+#    #+#             */
+/*   Updated: 2023/10/22 13:45:28 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstnew(void *content)
 {
-	char	*new;
-	int		i;
+	t_list	*new;
 
-	i = 0;
-	new = malloc(sizeof(char) * ft_strlen(s) + 1);
+	new = malloc(sizeof(t_list));
 	if (new == NULL)
 		return (NULL);
-	while (s[i])
-	{
-		new [i] = f(i, s[i]);
-		i++;
-	}
-	new[i] = '\0';
+	new->content = content;
+	new->next = NULL;
 	return (new);
 }
-
-// static	char	ft_test(unsigned int i, char c)
-// {
-// 	(void)i;
-// 	return (c + 1);
-// }
-// int	main(void)
-// {
-// 	char	str[] = "This is a string.";
-// 	printf("%s\n", str);
-// 	char	*str_new = ft_strmapi(str, ft_test);
-// 	printf("%s\n", str_new);
-// 	return (0);
-// }

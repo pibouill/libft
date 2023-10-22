@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/22 10:49:54 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/22 14:02:15 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,13 @@ SRCS			= 	ft_isalnum\
 					ft_striteri\
 					ft_split
 
-BONUS_SRCS		=
+BONUS_SRCS		=	ft_lstnew\
+					ft_lstadd_front\
+					ft_lstsize\
+					ft_lstlast
+
+
+
 
 SRC				= $(addsuffix .c, $(SRCS))
 OBJ 			= $(addsuffix .o, $(SRCS))
@@ -85,19 +91,19 @@ $(NAME): $(OBJ)
 	@echo "$(BLUE)Compiling... $< $(END_COLOR)"
 
 clean:
-	@rm -rf $(OBJ)
+	@rm -rf $(OBJ) $(BONUS_OBJ)
 	@echo "$(YELLOW)$(NAME) object files cleaned.$(END_COLOR)"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(YELLOW)$(NAME) .a file cleaned.$(END_COLOR)"
+	@echo "$(YELLOW)$(NAME) file cleaned.$(END_COLOR)"
 
 re: fclean all
 	@echo "$(GREEN)Cleaned all and rebuilt $(NAME)$(END_COLOR)"
 
 bonus: $(OBJ) $(BONUS_OBJ)
 	@$(AR) $(NAME) $(OBJ) $(BONUS_OBJ)
-	@echo "$(GREEN)$(NAME) bonuses compiled $(END_COLOR)"
+	@echo "$(GREEN)$(NAME) compiled $(END_COLOR)"
 
 # **************************************************************************** #
 # PHONY
