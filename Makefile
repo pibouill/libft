@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/22 14:02:15 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/22 14:37:16 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,9 +68,11 @@ SRCS			= 	ft_isalnum\
 BONUS_SRCS		=	ft_lstnew\
 					ft_lstadd_front\
 					ft_lstsize\
-					ft_lstlast
-
-
+					ft_lstlast\
+					ft_lstadd_back\
+					ft_lstdelone\
+					ft_lstclear\
+					ft_lstiter\
 
 
 SRC				= $(addsuffix .c, $(SRCS))
