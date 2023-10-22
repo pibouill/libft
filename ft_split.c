@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/20 20:46:34 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 13:04:50 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,53 +25,75 @@ static size_t	ft_word_count(char const *s, char c)
 			i++;
 		if (s[i] != '\0')
 			count++;
-		while (s[i] && (s[i] != c))
+		while (s[i] && s[i] != c)
 			i++;
 	}
 	return (count);
 }
 
-static int	ft_word_len(char const *s, int c, int len)
+static int	ft_word_len(char const *s, char c)
 {
 	int	i;
 
 	i = 0;
-	while (s[len] && s[len] != c)
-	{
+	while (s[i] && s[i] != c)
 		i++;
-		len++;
-	}
 	return (i);
+}
+
+static char	*ft_alloc_word(char const *s, char c)
+{
+	char	*new_word;
+	int		i;
+	int		len;
+
+	i = 0;
+	len = ft_word_len(s, c);
+	new_word = malloc(sizeof(char) * len + 1);
+	if (new_word == NULL)
+		return (NULL);
+	while (i < len)
+	{
+		new_word[i] = s[i];
+		i++;
+	}
+	new_word[i] = '\0';
+	return (new_word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char			**new;
-	size_t			len;
-	size_t			i;
-	size_t			j;
+	char	**new_arr;
+	int		i;
 
 	i = 0;
-	j = 0;
-	len = ft_strlen(s);
-	new = malloc(sizeof(char *) * ft_word_count(s, c) + 1);
-	if (new == NULL)
+	if (s == NULL)
 		return (NULL);
-	while (i < len && j < ft_word_count(s, c))
+	new_arr = malloc(sizeof(char *) * ft_word_count(s, c) + 1);
+	if (new_arr == NULL)
+		return (NULL);
+	while (*s)
 	{
-		while (s[i] == c)
-			i++;
-		new[j] = ft_substr(s, i, ft_word_len(s, c, i));
-		j++;
-		i += ft_word_len(s, c, i);
+		while (*s && *s == c)
+			s++;
+		if (*s)
+			new_arr[i++] = ft_alloc_word(s, c);
+		while (*s && *s != c)
+			s++;
 	}
-	new[j] = 0;
-	return (new);
+	new_arr[i] = 0;
+	return (new_arr);
 }
 
 // int	main()
 // {
-// 	char	str[] = "    im  a string        test ";
-// 	printf("%d\n", ft_word_len(str, ' '));
+// 	char str[] = "    im  a string    df   fdsfdsf test fdsf fd sfdsf f dsfds fdsf";
+// 	char	**ret;
+// 	int		i;
+
+// 	ret = ft_split(str, ' ');
+// 	i = -1;
+// 	while (ret[i++])
+// 		printf("%s\n", ret[i]);
 // 	return (0);
 // }

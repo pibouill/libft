@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/20 20:39:48 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 12:18:51 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 # include <bsd/string.h>
 # include <string.h>
 # include <limits.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
@@ -58,7 +64,5 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	**ft_split(char const *s, char c);
-
-
 
 #endif
