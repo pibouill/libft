@@ -6,11 +6,16 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 13:13:28 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:53:33 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Returns an array of strings
+** from the split of a string by char c
+*/
 
 static int	ft_word_count(char const *s, char c)
 {

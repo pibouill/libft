@@ -6,15 +6,19 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:23:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/20 17:51:13 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:50:00 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** Sets n bytes of memory area s to c
+*/
+
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t			i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

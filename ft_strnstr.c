@@ -6,11 +6,16 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:01:16 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/20 17:04:08 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 16:51:17 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Searches for str little in str big
+** Within len bytes
+*/
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

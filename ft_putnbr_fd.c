@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:27:44 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/20 13:31:06 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:51:13 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Writes int n to fd
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

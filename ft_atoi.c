@@ -6,11 +6,17 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:36:35 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 11:11:36 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:35:11 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Returns the int representaion of char *nptr
+** Skips whitespaces
+** 0 if more than one sign
+*/
 
 int	ft_atoi(const char *nptr)
 {

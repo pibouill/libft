@@ -6,11 +6,16 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:27:32 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 16:54:21 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:49:25 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Copies n bytes from src to dest
+** Handles memory overlapping
+*/
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

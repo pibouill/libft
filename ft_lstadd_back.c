@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:05:57 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 14:16:12 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:39:16 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Adds the node new to the end of lst
+*/
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:37:23 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 17:15:06 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:38:50 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Returns the (char *) representation of int n
+*/
 
 static int	nb_len(int n)
 {

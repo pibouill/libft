@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:52:22 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 13:53:45 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 16:54:44 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Lowercases c
+*/
 
 int	ft_tolower(int c)
 {

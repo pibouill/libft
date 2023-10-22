@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:06:09 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 16:19:21 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 16:51:47 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Returns a pointer to last occurence of c in *s
+*/
 
 char	*ft_strrchr(const char *s, int c)
 {

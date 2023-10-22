@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:23:51 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 13:38:22 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:55:01 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Applies function f to each char of *s
+*/
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

@@ -6,11 +6,16 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:32:03 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 16:17:43 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 16:50:34 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Returns first difference between *s1 and *s2
+** Within n bytes
+*/
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

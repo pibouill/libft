@@ -6,13 +6,32 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:37:58 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 14:38:37 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:32:43 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** Creates new list
+** from the application of the f function
+** to each node of lst
+*/
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	
+	t_list	*new_list;
+	t_list	*new_node;
+
+	new_list = NULL;
+	while (lst)
+	{
+		new_node = ft_lstnew(f(lst->content));
+		if (new_node == NULL)
+			del(new_node);
+		else
+			ft_lstadd_back(&new_list, new_node);
+		lst = lst->next;
+	}
+	return (new_list);
 }

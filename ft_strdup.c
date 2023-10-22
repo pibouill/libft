@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:22:09 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/18 16:25:41 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:54:34 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Duplicates *s
+*/
 
 char	*ft_strdup(const char *s)
 {

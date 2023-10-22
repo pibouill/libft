@@ -6,28 +6,34 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:26:35 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 16:35:54 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 16:47:58 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** Copies src to dst
+** Up to size - 1
+** Returns size of src
+*/
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	count;
+	size_t	len;
 
 	i = 0;
-	count = 0;
-	while (src[count])
-		count++;
+	len = 0;
+	while (src[len])
+		len++;
 	if (size == 0)
-		return (count);
+		return (len);
 	while (src[i] && i < (size - 1))
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (count);
+	return (len);
 }

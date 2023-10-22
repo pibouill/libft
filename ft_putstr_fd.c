@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:01:54 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 12:18:39 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:51:26 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Writes *s to fd
+*/
 
 void	ft_putstr_fd(char *s, int fd)
 {

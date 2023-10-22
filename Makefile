@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/22 14:37:16 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/22 15:26:10 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ BONUS_SRCS		=	ft_lstnew\
 					ft_lstdelone\
 					ft_lstclear\
 					ft_lstiter\
-
+					ft_lstmap
 
 SRC				= $(addsuffix .c, $(SRCS))
 OBJ 			= $(addsuffix .o, $(SRCS))

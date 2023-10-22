@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:19:53 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/20 15:08:39 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 16:52:23 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Trims *s1 from chars in *set
+*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

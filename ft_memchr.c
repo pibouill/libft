@@ -6,11 +6,16 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:52:06 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/18 15:05:41 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:46:52 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Looks for c in memory area s
+** n bytes are searched
+*/
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

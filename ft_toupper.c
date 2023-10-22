@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:25:39 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/17 13:36:38 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 16:54:41 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Uppercases c
+*/
 
 int	ft_toupper(int c)
 {

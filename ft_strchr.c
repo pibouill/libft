@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:54:38 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/20 13:41:57 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:54:16 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Returns pointer to first c in *s
+*/
 
 char	*ft_strchr(const char *s, int c)
 {

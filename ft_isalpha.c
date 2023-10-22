@@ -6,11 +6,15 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:56:04 by pbouillo          #+#    #+#             */
-/*   Updated: 2023/10/16 12:09:28 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:36:56 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Returns 1 if c is a letter
+*/
 
 int	ft_isalpha(int c)
 {

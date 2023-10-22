@@ -6,12 +6,16 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 10:36:34 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/19 16:54:02 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:48:38 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
+
+/*
+** Copies n bytes from src to dest
+*/
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

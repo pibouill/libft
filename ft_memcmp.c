@@ -6,11 +6,16 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:12:02 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 11:49:50 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:48:09 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Returns first difference between memory areas
+** Within n bytes
+*/
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

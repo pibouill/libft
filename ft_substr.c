@@ -6,11 +6,16 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:43:46 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 11:42:29 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 16:53:52 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Creates new string from *s
+** Starting at index start and of size len
+*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
