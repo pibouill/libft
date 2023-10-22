@@ -6,24 +6,24 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 13:04:50 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/22 13:13:28 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_word_count(char const *s, char c)
+static int	ft_word_count(char const *s, char c)
 {
-	int		i;
-	size_t	count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
-		if (s[i] != '\0')
+		if (s[i])
 			count++;
 		while (s[i] && s[i] != c)
 			i++;
@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	new_arr = malloc(sizeof(char *) * ft_word_count(s, c) + 1);
+	new_arr = malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
 	if (new_arr == NULL)
 		return (NULL);
 	while (*s)
@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 
 // int	main()
 // {
-// 	char str[] = "    im  a string    df   fdsfdsf test fdsf fd sfdsf f dsfds fdsf";
+// 	char str[] = "    im  a string    df fdsf fd sfdsf f dsfds fdsf";
 // 	char	**ret;
 // 	int		i;
 
