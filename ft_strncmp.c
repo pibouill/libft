@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:32:03 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 10:56:00 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 12:24:38 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
-	if (s1 == NULL || s2 == NULL)
-		return (0);
 	i = 0;
 	if (n == 0)
 		return (0);

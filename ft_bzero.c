@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:24:49 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 10:52:31 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 12:24:01 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	ft_bzero(void *s, size_t n)
 	size_t			i;
 	unsigned char	*str;
 
-	if (s == NULL)
-		return ;
 	i = 0;
 	str = (unsigned char *) s;
 	while (i < n)

@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:22:21 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 11:17:48 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 12:23:47 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
-	if (str == NULL)
-		return (0);
 	i = 0;
 	while (str[i])
 		i++;

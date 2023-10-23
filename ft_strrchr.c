@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:06:09 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 10:55:32 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 12:24:32 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	if (s == NULL)
-		return (NULL);
 	i = ft_strlen(s);
 	while (i >= 0)
 	{

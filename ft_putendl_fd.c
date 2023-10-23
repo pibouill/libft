@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:23:39 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:51:00 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 12:31:17 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,9 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
+
+// int	main()
+// {
+// 	ft_putendl_fd("test", 1);
+// 	return (0);
+// }
