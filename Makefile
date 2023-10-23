@@ -6,14 +6,14 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/23 10:42:21 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/23 11:29:02 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libft.a
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
-RM 			= rm
+RM 			= rm -rf
 INC			= libft.h
 AR 			= ar rc
 # **************************************************************************** #
@@ -93,11 +93,11 @@ $(NAME): $(OBJ)
 	@echo "$(BLUE)Compiling... $< $(END_COLOR)"
 
 clean:
-	@rm -rf $(OBJ) $(BONUS_OBJ)
+	@$(RM) $(OBJ) $(BONUS_OBJ)
 	@echo "$(YELLOW)$(NAME) object files cleaned.$(END_COLOR)"
 
 fclean: clean
-	@rm -f $(NAME)
+	@$(RM) $(NAME)
 	@echo "$(YELLOW)$(NAME) file cleaned.$(END_COLOR)"
 
 re: fclean all
@@ -106,10 +106,6 @@ re: fclean all
 bonus: $(OBJ) $(BONUS_OBJ)
 	@$(AR) $(NAME) $(OBJ) $(BONUS_OBJ)
 	@echo "$(GREEN)$(NAME) compiled $(END_COLOR)"
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 # **************************************************************************** #
 # PHONY
