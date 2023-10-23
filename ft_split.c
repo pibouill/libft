@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 11:00:35 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 15:14:12 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** from the split of a string by char c
 */
 
-static int	ft_word_count(char const *s, char c)
+static int	word_count(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -36,7 +36,7 @@ static int	ft_word_count(char const *s, char c)
 	return (count);
 }
 
-static int	ft_word_len(char const *s, char c)
+static int	word_len(char const *s, char c)
 {
 	int	i;
 
@@ -46,14 +46,14 @@ static int	ft_word_len(char const *s, char c)
 	return (i);
 }
 
-static char	*ft_alloc_word(char const *s, char c)
+static char	*alloc_word(char const *s, char c)
 {
 	char	*new_word;
 	int		i;
 	int		len;
 
 	i = 0;
-	len = ft_word_len(s, c);
+	len = word_len(s, c);
 	new_word = malloc(sizeof(char) * len + 1);
 	if (new_word == NULL)
 		return (NULL);
@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	new_arr = malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
+	new_arr = malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (new_arr == NULL)
 		return (NULL);
 	while (*s)
@@ -82,7 +82,7 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s == c)
 			s++;
 		if (*s)
-			new_arr[i++] = ft_alloc_word(s, c);
+			new_arr[i++] = alloc_word(s, c);
 		while (*s && *s != c)
 			s++;
 	}
