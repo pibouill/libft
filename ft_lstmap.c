@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:37:58 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:32:43 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 11:25:00 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*new_node;
 
+	if (lst == NULL || f == NULL || del == NULL)
+		return (NULL);
 	new_list = NULL;
 	while (lst)
 	{

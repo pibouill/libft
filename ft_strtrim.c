@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:19:53 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 16:52:23 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 10:58:08 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t		len;
 	char		*trimmed;
 
+	if (s1 == NULL)
+		return (NULL);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	len = ft_strlen(s1);

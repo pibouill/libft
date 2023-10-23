@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:05:43 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 16:49:27 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 11:14:55 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	new = malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (new == NULL)
 		return (NULL);

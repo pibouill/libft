@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:01:16 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 16:51:17 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 10:56:36 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (big == NULL || little == NULL)
+		return (NULL);
 	i = 0;
 	if (*little == '\0')
 		return ((char *)big);

@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:36:35 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:35:11 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 10:57:02 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_atoi(const char *nptr)
 	int	ret;
 	int	sign;
 
+	if (nptr == NULL)
+		return (0);
 	ret = 0;
 	sign = 1;
 	while ((*nptr == ' ') || (*nptr >= 9 && *nptr <= 13))

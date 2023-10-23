@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:57:05 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:45:17 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 11:23:51 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_lstsize(t_list *lst)
 {
 	int	size;
 
+	if (lst == NULL)
+		return (0);
 	size = 0;
 	while (lst)
 	{

@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:21:14 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:43:02 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 11:21:43 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (lst == NULL || (*lst) == NULL)
+	if (lst == NULL || (*lst) == NULL || del == NULL)
 		return ;
 	ft_lstclear(&(*lst)->next, del);
 	(del)((*lst)->content);

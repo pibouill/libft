@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:23:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:50:00 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 10:51:55 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		((unsigned char *)s)[i] = (unsigned char) c;

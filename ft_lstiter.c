@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:34:52 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:44:07 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/23 11:24:30 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
+	if (f == NULL || lst == NULL)
+		return ;
 	while (lst)
 	{
 		f(lst->content);
