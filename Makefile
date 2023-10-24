@@ -6,23 +6,23 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/23 11:29:02 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/24 15:47:08 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= libft.a
-CC			= cc
-CFLAGS		= -Wall -Wextra -Werror
-RM 			= rm -rf
-INC			= libft.h
-AR 			= ar rc
+NAME			= libft.a
+CC				= cc
+CFLAGS			= -Wall -Wextra -Werror
+RM 				= rm -rf
+INC				= libft.h
+AR 				= ar rc
 # **************************************************************************** #
 # COLORS
 
-GREEN		= \033[0;92m
-YELLOW		= \033[0;93m
-BLUE		= \033[0;94m
-END_COLOR	= \033[0;39m
+GREEN			= \033[0;92m
+YELLOW			= \033[0;93m
+BLUE			= \033[0;94m
+END_COLOR		= \033[0;39m
 
 # **************************************************************************** #
 # SOURCES
@@ -107,7 +107,10 @@ bonus: $(OBJ) $(BONUS_OBJ)
 	@$(AR) $(NAME) $(OBJ) $(BONUS_OBJ)
 	@echo "$(GREEN)$(NAME) compiled $(END_COLOR)"
 
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	cc -nostartfiles -shared -o libft.so $(OBJ)
+
 # **************************************************************************** #
-# PHONY
 
 .PHONY: all clean fclean re bonus

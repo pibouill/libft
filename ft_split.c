@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 15:14:12 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/24 19:09:13 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	new_arr = malloc(sizeof(char *) * (word_count(s, c) + 1));
+	new_arr = malloc(sizeof(char *) * word_count(s, c) + 1);
 	if (new_arr == NULL)
 		return (NULL);
 	while (*s)
@@ -92,13 +92,18 @@ char	**ft_split(char const *s, char c)
 
 // int	main()
 // {
-// 	char str[] = "    im  a string    df fdsf fd sfdsf f dsfds fdsf";
+// 	char str[] = "^^^^^^^^^2^^^^1^^2a,^^^^";
 // 	char	**ret;
 // 	int		i;
+// 	char	sep = '^';
 
-// 	ret = ft_split(str, ' ');
+// 	ret = ft_split(str, sep);
 // 	i = -1;
+// 	printf("word count: %i\n", word_count(str, sep));
 // 	while (ret[i++])
+// 	{
+// 		// printf("word len = %i\n", word_len(ret[i], sep));
 // 		printf("%s\n", ret[i]);
+// 	}
 // 	return (0);
 // }

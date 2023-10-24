@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:19:53 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 10:58:08 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:27:48 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main()
 // {
-// 	char	s1[] = ".teste, bla ,.,.";
+// 	char	s1[] = ".,.,.,teste, bla ,.,.";
 // 	char	set[] = ",.";
 
 // 	printf("%s\n", ft_strtrim(s1, set));
