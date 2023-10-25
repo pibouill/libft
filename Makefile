@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/24 15:47:08 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/25 15:39:07 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ END_COLOR		= \033[0;39m
 # **************************************************************************** #
 # SOURCES
 
-SRCS			= 	ft_isalnum\
+SRCS_NAME			= 	ft_isalnum\
 					ft_isalpha\
 					ft_isascii\
 					ft_isdigit\
@@ -65,7 +65,7 @@ SRCS			= 	ft_isalnum\
 					ft_striteri\
 					ft_split
 
-BONUS_SRCS		=	ft_lstnew\
+BONUS_SRCS_NAME		=	ft_lstnew\
 					ft_lstadd_front\
 					ft_lstsize\
 					ft_lstlast\
@@ -75,10 +75,10 @@ BONUS_SRCS		=	ft_lstnew\
 					ft_lstiter\
 					ft_lstmap
 
-SRC				= $(addsuffix .c, $(SRCS))
-OBJ 			= $(addsuffix .o, $(SRCS))
-BONUS_SRC		= $(addsuffix .c, $(BONUS_SRCS))
-BONUS_OBJ 		= $(addsuffix .o, $(BONUS_SRCS))
+SRC				= $(addsuffix .c, $(SRCS_NAME))
+OBJ 			= $(addsuffix .o, $(SRCS_NAME))
+BONUS_SRC		= $(addsuffix .c, $(BONUS_SRCS_NAME))
+BONUS_OBJ 		= $(addsuffix .o, $(BONUS_SRCS_NAME))
 
 # **************************************************************************** #
 
@@ -106,10 +106,6 @@ re: fclean all
 bonus: $(OBJ) $(BONUS_OBJ)
 	@$(AR) $(NAME) $(OBJ) $(BONUS_OBJ)
 	@echo "$(GREEN)$(NAME) compiled $(END_COLOR)"
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	cc -nostartfiles -shared -o libft.so $(OBJ)
 
 # **************************************************************************** #
 
