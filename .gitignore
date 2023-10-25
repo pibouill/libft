@@ -4,6 +4,4 @@ a.out
 *.o
 *.a
 .DS_Store
-*.md
-
-
+README.md
