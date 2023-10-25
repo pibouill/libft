@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/24 19:09:13 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/25 12:57:19 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char	*alloc_word(char const *s, char c)
 
 	i = 0;
 	len = word_len(s, c);
-	new_word = malloc(sizeof(char) * len + 1);
+	new_word = malloc(sizeof(char) * (len + 1));
 	if (new_word == NULL)
 		return (NULL);
 	while (i < len)
@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	new_arr = malloc(sizeof(char *) * word_count(s, c) + 1);
+	new_arr = malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (new_arr == NULL)
 		return (NULL);
 	while (*s)
@@ -90,20 +90,27 @@ char	**ft_split(char const *s, char c)
 	return (new_arr);
 }
 
-// int	main()
+// int main()
 // {
-// 	char str[] = "^^^^^^^^^2^^^^1^^2a,^^^^";
-// 	char	**ret;
-// 	int		i;
-// 	char	sep = '^';
+//     char const *s = "";
+//     char c = '^';
+// 	int	i = 0;
+//     char **words = ft_split(s, c);
 
-// 	ret = ft_split(str, sep);
-// 	i = -1;
-// 	printf("word count: %i\n", word_count(str, sep));
-// 	while (ret[i++])
+//     if (words != NULL)
 // 	{
-// 		// printf("word len = %i\n", word_len(ret[i], sep));
-// 		printf("%s\n", ret[i]);
-// 	}
-// 	return (0);
+// 		while (words[i])
+// 		{
+// 			printf("Word at index %d: %s\n", i, words[i]);
+// 			i++;
+// 		}
+// 		i = 0;
+// 		while (words[i])
+// 		{
+// 			free(words[i]);
+// 			i++;
+// 		}
+// 		free(words);
+//     }
+//     return (0);
 // }
