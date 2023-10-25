@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/25 12:57:19 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:49:53 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s == c)
 			s++;
 		if (*s)
-			new_arr[i++] = alloc_word(s, c);
+			new_arr[i] = alloc_word(s, c);
 		while (*s && *s != c)
 			s++;
 	}
