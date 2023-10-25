@@ -17,7 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stddef.h>
-# include <bsd/string.h>
+//# include <bsd/string.h>
 # include <string.h>
 # include <limits.h>
 # include <ctype.h>
