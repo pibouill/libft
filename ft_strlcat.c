@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:27:59 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 16:39:47 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/26 18:58:04 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dest_len;
 	size_t	i;
 
+	if (dst == NULL && size == 0)
+		return (0);
 	i = 0;
 	dest_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
@@ -39,12 +41,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dest_len + src_len);
 }
 
-// int	main()
-// {
-// 	char	src[] = "im the source";
-// 	char	dst[] = "im the dest";
+#include <bsd/string.h>
+int	main()
+{
+	char	src[] = "abc";
+	char	dst[] = "";
 
-// 	printf("ft_strlcat returns %zu\n", ft_strlcat(dst, src, 10));
-// 	printf("strlcat returns %zu\n", strlcat(dst, src, 10));
-// 	return (0);
-// }
+	printf("ft_strlcat returns %zu\n", ft_strlcat(dst, src, 0));
+	printf("strlcat returns %zu\n", strlcat(dst, src, 0));
+	return (0);
+}

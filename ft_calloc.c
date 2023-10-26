@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:34:10 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:12:45 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:42:53 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*new;
+	size_t	total_bytes;
 
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	total_bytes = nmemb * size;
+	if (total_bytes / size != nmemb)
+		return (NULL);
 	new = malloc(size * nmemb);
 	if (new == NULL)
 		return (NULL);

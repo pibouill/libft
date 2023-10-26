@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/24 17:02:18 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:15:59 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stddef.h>
-//# include <bsd/string.h>
 # include <string.h>
 # include <limits.h>
 # include <ctype.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

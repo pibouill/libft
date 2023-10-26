@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/26 10:58:58 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:26:47 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,17 @@
 ** Returns an array of strings
 ** from the split of a string by char c
 */
+
+static void	*free_array(char **arr)
+{
+	size_t	i;
+
+	i = 0;
+	while (arr[i] != NULL)
+		free(arr[i++]);
+	free(arr);
+	return (NULL);
+}
 
 static int	word_count(char const *s, char c)
 {
@@ -82,7 +93,12 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s == c)
 			s++;
 		if (*s)
-			new_arr[i++] = alloc_word(s, c);
+		{
+			new_arr[i] = alloc_word(s, c);
+			if (new_arr[i] == NULL)
+				return (free_array(new_arr));
+			i++;
+		}
 		while (*s && *s != c)
 			s++;
 	}

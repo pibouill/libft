@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/26 11:28:35 by pibouill         ###   ########.fr        #
+#    Updated: 2023/10/26 17:38:44 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,12 +33,10 @@ SRCS_NAME			= 	ft_isalnum\
 						ft_isdigit\
 						ft_isprint\
 						ft_memset\
-						ft_strchr\
 						ft_strlen\
 						ft_strrchr\
 						ft_tolower\
 						ft_toupper\
-						ft_memset\
 						ft_strchr\
 						ft_strlcat\
 						ft_strlcpy\
@@ -51,7 +49,6 @@ SRCS_NAME			= 	ft_isalnum\
 						ft_memcmp\
 						ft_memcpy\
 						ft_memmove\
-						ft_memset\
 						ft_strdup\
 						ft_substr\
 						ft_strjoin\
@@ -81,6 +78,7 @@ BONUS_SRC			= $(addsuffix .c, $(BONUS_SRCS_NAME))
 BONUS_OBJ 			= $(addsuffix .o, $(BONUS_SRCS_NAME))
 
 # **************************************************************************** #
+# RULES
 
 all: $(NAME)
 
@@ -105,7 +103,11 @@ re: fclean all
 
 bonus: $(OBJ) $(BONUS_OBJ)
 	@$(AR) $(NAME) $(OBJ) $(BONUS_OBJ)
-	@echo "$(GREEN)$(NAME) compiled $(END_COLOR)"
+	@echo "$(GREEN)$(NAME) compiled with bonuses$(END_COLOR)"
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS_SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS_OBJ)
 
 # **************************************************************************** #
 
