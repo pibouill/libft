@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/25 21:32:35 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/26 10:58:58 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s == c)
 			s++;
 		if (*s)
-			new_arr[i] = alloc_word(s, c);
+			new_arr[i++] = alloc_word(s, c);
 		while (*s && *s != c)
 			s++;
 	}
@@ -90,22 +90,22 @@ char	**ft_split(char const *s, char c)
 	return (new_arr);
 }
 
-int main()
-{
-    const char *s = "fs nfid isdn i sdoif nsifnd ios ni i odfis";
-    char c = ' ';
-	int	i = 0;
-    char **words = ft_split(s, c);
+// int main()
+// {
+//     const char *s = "fs nfid isdn i sdoif nsifnd ios ni i odfis";
+//     char c = ' ';
+// 	int	i = 0;
+//     char **words = ft_split(s, c);
 
-    if (words)
-	{
-		while (words[i])
-		{
-			printf("Word at index %d: %s\n", i, words[i]);
-			free(words[i]);
-			i++;
-		}
-		free(words);
-    }
-    return (0);
-}
+//     if (words)
+// 	{
+// 		while (words[i])
+// 		{
+// 			printf("Word at index %d: %s\n", i, words[i]);
+// 			free(words[i]);
+// 			i++;
+// 		}
+// 		free(words);
+//     }
+//     return (0);
+// }
