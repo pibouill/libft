@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:27:59 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/26 18:58:04 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/10/27 11:35:07 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dest_len + src_len);
 }
 
-#include <bsd/string.h>
-int	main()
-{
-	char	src[] = "abc";
-	char	dst[] = "";
+// #include <bsd/string.h>
+// int	main()
+// {
+// 	char	src[] = "abc";
+// 	char	dst[] = "";
 
-	printf("ft_strlcat returns %zu\n", ft_strlcat(dst, src, 0));
-	printf("strlcat returns %zu\n", strlcat(dst, src, 0));
-	return (0);
-}
+// 	printf("ft_strlcat returns %zu\n", ft_strlcat(dst, src, 0));
+// 	printf("strlcat returns %zu\n", strlcat(dst, src, 0));
+// 	return (0);
+// }
