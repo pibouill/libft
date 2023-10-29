@@ -6,3 +6,4 @@ a.out
 *.so
 .DS_Store
 README.md
+bin/
