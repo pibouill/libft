@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/29 16:10:41 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:43:49 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@
 # include <limits.h>
 # include <ctype.h>
 # include <stdint.h>
+# include <stdarg.h>
+
+# ifdef __APPLE__
+#  define PTR_NULL "0x0"
+# else
+#  define PTR_NULL "(nil)"
+# endif
 
 typedef struct s_list
 {
@@ -67,6 +74,10 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int     putchar_len(int c);
+int     putstr_len(char *str);
+int     putptr_len(unsigned long long ptr, int ptr_prefix);
+int     put_nbr_u_hex_len(long n, int base, int is_uppercase);
 
 //	ADDITIONAL
 char	*ft_itoa(int n);
@@ -88,13 +99,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-
 // ADDITIONS
 void	ft_putnbr(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 int		ft_digitcount(long nb, int base, int sign);
-
-
+int     ft_printf(const char *format, ...);
 
 #endif
