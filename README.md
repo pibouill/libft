@@ -1,3 +1,11 @@
+<p align="center">
+  <img src="https://github.com/pibouill/42-project-badges/blob/main/badges/libfte.png" alt="ready to help"/>
+</p>
+
+<p align="center">
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/pibouill/libft">
+</p>
+
 # Libft
 > This project is about understanding the way these functions work, implementing and learning to use them. You will create your own library. It will be
 helpful since you will use it in your next C school assignments.
