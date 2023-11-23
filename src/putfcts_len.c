@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:41:33 by pibouill          #+#    #+#             */
-/*   Updated: 2023/11/02 16:54:58 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/11/15 15:04:47 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	putchar_len(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:23:51 by pibouill          #+#    #+#             */
-/*   Updated: 2023/11/01 17:19:05 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/11/09 18:13:22 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 // 	printf("%s\n", str);
 // 	ft_striteri(str, ft_test);
 // 	printf("%s\n", str);
+// 	// printf("%d\n", ft_strlen(str));
 // 	return (0);
 // }

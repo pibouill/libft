@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:32:03 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 12:24:38 by pibouill         ###   ########.fr       */
+/*   Updated: 2023/11/15 15:03:42 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int	main()
 // {
-// 	char	str[] = "test\0";
-// 	char	str2[] = "test\200";
-// 	printf("%i\n", ft_strncmp(str, str2, 6));
-// 	printf("%i\n", strncmp(str, str2, 6));
+// 	char str3[] = "test\200";
+// 	// char str4[] = "test\0";
+// 	printf("%i\n", ft_strncmp(str3, "test\0", 10));
+// 	printf("%i\n", strncmp(str3, "test\0", 10));
+// 	printf("%i\n", ft_strncmp("test-a", "test-A", 10));
+// 	printf("%i\n", strncmp("test-a", "test-A", 10));
 // 	return (0);
 // }
