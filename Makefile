@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2023/10/29 15:13:26 by pibouill         ###   ########.fr        #
+#    Updated: 2024/01/24 17:28:48 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ AR 				= ar rc
 SRC_DIR			= src
 INC_DIR			= inc
 BIN_DIR			= bin
+
 # **************************************************************************** #
 # COLORS
 
@@ -48,7 +49,7 @@ $(BIN_DIR)/%.o: $(SRC_DIR)/%.c Makefile | $(BIN_DIR)
 
 $(BIN_DIR):
 	@mkdir $(BIN_DIR)
-	@echo "$(YELLOW)Created $(BIN_DIR)/ directory in $(DIRS)/$(END_COLOR)"
+	@echo "$(YELLOW)Created $(BIN_DIR)/ directory$(END_COLOR)"
 
 clean:
 	@$(RM) $(BIN_DIR)

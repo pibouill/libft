@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2023/11/09 17:50:02 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/01/24 17:27:17 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,20 @@
 # include <stdint.h>
 # include <stdarg.h>
 
+// ft_printf
 # ifdef __APPLE__
 #  define PTR_NULL "0x0"
 # else
 #  define PTR_NULL "(nil)"
+# endif
+
+// get_next_line
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
+# ifndef FD_LIMIT
+# define FD_LIMIT 1024
 # endif
 
 typedef struct s_list
