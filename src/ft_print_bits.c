@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print_bits.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
+/*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 11:22:21 by pibouill          #+#    #+#             */
-/*   Updated: 2024/01/24 17:38:57 by pibouill         ###   ########.fr       */
+/*   Created: 2024/01/24 17:32:49 by pibouill          #+#    #+#             */
+/*   Updated: 2024/01/24 17:39:37 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Returns length of *str
-*/
-
-size_t	ft_strlen(const char *str)
+void	ft_print_bits(unsigned char octet)
 {
-	size_t	i;
+	unsigned char	bit;
+	int				i;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	i = 8;
+	while (i--)
+	{
+		bit = (octet >> i & 1) + '0';
+		write(1, &bit, 1);
+	}
 }
-
-// int	main()
-// {
-// 	ft_putchar('c');
-// 	ft_strlen1("test");
-// 	printf("\nbla\n", ft_strlen("test");
-// 	return (0);
-// }
