@@ -6,3 +6,6 @@ a.out
 *.so
 .DS_Store
 bin/
+*.swp
+tags
+
