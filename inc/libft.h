@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2024/01/24 17:27:17 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/03/20 20:54:24 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ int		ft_toupper(int c);
 size_t	ft_strlen(const char *s);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
-int		ft_atoi(const char *nptr);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
@@ -115,5 +114,8 @@ void	ft_putchar(char c);
 void	ft_putstr(char *str);
 int		ft_digitcount(long nb, int base, int sign);
 int     ft_printf(const char *format, ...);
+int		ft_intlen(int nbr);
+int		ft_atoi_base(char *str, int base);
+int		ft_str_arr_len(char **ar);
 
 #endif
