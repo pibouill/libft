@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 13:16:36 by pibouill          #+#    #+#             */
-/*   Updated: 2024/01/29 13:16:41 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:08:36 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,35 +105,3 @@ char	*get_next_line(int fd)
 	stash[fd] = clean_stash(stash[fd]);
 	return (line);
 }
-
-// Nasty but works (kinda)
-//
-//int	main(int ac, char **av)
-//{
-//	int		fd[3];
-//    char	*line[3];
-//	(void)ac;
-//    fd[0] = open(av[1], O_RDWR);
-//	fd[1] = open(av[2], O_RDWR);
-//	fd[2] = open(av[3], O_RDWR);
-//    while (line[0] != NULL && line[1] != NULL && line[2] != NULL)
-//    {
-//        line[0] = get_next_line(fd[0]);
-//        line[1] = get_next_line(fd[1]);
-//        line[2] = get_next_line(fd[2]);
-//
-//		printf("first call:%s\n", line[0]);
-//		printf("first call:%s\n", line[1]);
-//		printf("first call:%s\n", line[2]);
-//        line[0] = get_next_line(fd[0]);
-//        line[1] = get_next_line(fd[1]);
-//        line[2] = get_next_line(fd[2]);
-//		printf("second call:%s\n", line[0]);
-//		printf("second call:%s\n", line[1]);
-//		printf("second call:%s\n", line[2]);
-//        free(line[0]);
-//        free(line[1]);
-//        free(line[2]);
-//    }
-//    return (0);
-//}
