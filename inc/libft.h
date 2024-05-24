@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2024/04/21 14:22:23 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/05/24 12:06:12 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # include <ctype.h>
 # include <stdint.h>
 # include <stdarg.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
 // ft_printf
 # ifdef __APPLE__
@@ -117,5 +119,7 @@ int		ft_printf(const char *format, ...);
 int		ft_intlen(int nbr);
 int		ft_atoi_base(const char *str, unsigned int base);
 int		ft_str_arr_len(char **ar);
+char	*get_next_line(int fd);
+int		ft_wordcount(const char *s, char c);
 
 #endif
