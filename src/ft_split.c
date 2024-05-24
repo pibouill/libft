@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:27:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/26 16:26:47 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/05/24 12:09:30 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,25 +26,6 @@ static void	*free_array(char **arr)
 		free(arr[i++]);
 	free(arr);
 	return (NULL);
-}
-
-static int	word_count(char const *s, char c)
-{
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (s[i])
-	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i])
-			count++;
-		while (s[i] && s[i] != c)
-			i++;
-	}
-	return (count);
 }
 
 static int	word_len(char const *s, char c)
@@ -85,7 +66,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	new_arr = malloc(sizeof(char *) * (word_count(s, c) + 1));
+	new_arr = malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
 	if (new_arr == NULL)
 		return (NULL);
 	while (*s)
