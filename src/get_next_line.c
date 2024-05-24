@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 13:16:36 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/21 13:08:36 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/05/24 13:56:41 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,22 @@ char	*read_to_stash(char *stash, int fd)
 	ssize_t	readed;
 	char	*buffer;
 
-	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	buffer = malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (buffer == NULL)
 		return (NULL);
 	readed = 1;
-	while (readed != 0 && !ft_strchr(stash, '\n'))
+	while ((readed != 0) && !(ft_strchr(stash, '\n')))
 	{
 		readed = read(fd, buffer, BUFFER_SIZE);
-		if (readed < 0)
+		if (readed <= 0)
 		{
 			free(buffer);
-			return (NULL);
+			if (readed == -1)
+			{
+				free(stash);
+				return (NULL);
+			}
+			return (stash);
 		}
 		buffer[readed] = '\0';
 		stash = ft_strjoin(stash, buffer);
@@ -94,14 +99,17 @@ char	*stash_to_line(char *stash)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*stash[FD_LIMIT];
+	static char	*stash;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > FD_LIMIT)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	stash[fd] = read_to_stash(stash[fd], fd);
-	if (stash[fd] == NULL)
+	stash = read_to_stash(stash, fd);
+	if (stash == NULL || stash[0] == '\0')
+	{
+		free(stash);
 		return (NULL);
-	line = stash_to_line(stash[fd]);
-	stash[fd] = clean_stash(stash[fd]);
+	}
+	line = stash_to_line(stash);
+	stash = clean_stash(stash);
 	return (line);
 }
