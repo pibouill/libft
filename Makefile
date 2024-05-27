@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2024/05/27 13:17:35 by pibouill         ###   ########.fr        #
+#    Updated: 2024/05/27 17:47:33 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,7 +107,7 @@ $(BIN_DIR)/%.o: $(SRC_DIR)/%.c Makefile | $(BIN_DIR)
 
 $(BIN_DIR):
 	@mkdir $(BIN_DIR)
-	@echo "$(YELLOW)Created $(BIN_DIR)/ directory$(END_COLOR)"
+	@echo "$(YELLOW)Created $(BIN_DIR)/ directory at libft/$(END_COLOR)"
 
 clean:
 	@$(RM) $(BIN_DIR)
