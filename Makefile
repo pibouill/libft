@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2024/05/24 12:05:55 by pibouill         ###   ########.fr        #
+#    Updated: 2024/05/27 13:17:35 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,9 @@ SRC_FILES		=		ft_atoi\
 						ft_toupper\
 						get_next_line\
 						putfcts_len\
-						ft_wordcount
+						ft_wordcount\
+						ft_printf_fd\
+						putfcts_len_fd
 
 SRC					= $(addprefix $(SRC_DIR)/, $(addsuffix .c, $(SRC_FILES)))
 OBJ 				= $(addprefix $(BIN_DIR)/, $(addsuffix .o, $(SRC_FILES)))

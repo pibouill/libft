@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:59:22 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/24 13:58:12 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/05/27 13:24:30 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	/*if (s1 == NULL || s2 == NULL)
-		return (NULL);*/
 	if (s1 == NULL)
 		s1 = ft_strdup("");
 	if (s1 && s2 == NULL)
-	{
-		free((char *)s1);
-		return (NULL);
-	}
+		return (free((char *)s1), NULL);
 	i = 0;
 	j = 0;
 	new = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
