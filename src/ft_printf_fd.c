@@ -6,13 +6,13 @@
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 13:01:51 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/27 13:22:45 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/05/27 13:35:30 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	handle_format(char specifier, va_list arg, int fd)
+static int	handle_format(char specifier, va_list arg, int fd)
 {
 	if (specifier == 'c')
 		return (putchar_len_fd(va_arg(arg, int), fd));
