@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/27 13:17:00 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/05/27 13:30:35 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,14 +85,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-int		putchar_len(int c);
-int		putstr_len(char *str);
-int		putptr_len(unsigned long long ptr, int ptr_prefix);
-int		put_nbr_u_hex_len(long n, int base, int is_uppercase);
-int		putchar_len_fd(int c, int fd);
-int		putstr_len_fd(char *str, int fd);
-int		putptr_len_fd(unsigned long long ptr, int ptr_prefix, int fd);
-int		put_nbr_u_hex_len_fd(long n, int base, int is_uppercase, int fd);
 
 //	ADDITIONAL
 char	*ft_itoa(int n);
@@ -125,5 +117,16 @@ int		ft_atoi_base(const char *str, unsigned int base);
 int		ft_str_arr_len(char **ar);
 char	*get_next_line(int fd);
 int		ft_wordcount(const char *s, char c);
+int		ft_printf_fd(int fd, const char *format, ...);
+
+// HELPERS
+int		putchar_len(int c);
+int		putstr_len(char *str);
+int		putptr_len(unsigned long long ptr, int ptr_prefix);
+int		put_nbr_u_hex_len(long n, int base, int is_uppercase);
+int		putchar_len_fd(int c, int fd);
+int		putstr_len_fd(char *str, int fd);
+int		putptr_len_fd(unsigned long long ptr, int ptr_prefix, int fd);
+int		put_nbr_u_hex_len_fd(long n, int base, int is_uppercase, int fd);
 
 #endif
