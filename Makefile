@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2024/05/27 17:47:33 by pibouill         ###   ########.fr        #
+#    Updated: 2024/05/28 12:34:02 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -98,28 +98,27 @@ OBJ 				= $(addprefix $(BIN_DIR)/, $(addsuffix .o, $(SRC_FILES)))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(AR) $(NAME) $(OBJ)
-	@echo "$(GREEN)$(NAME) compiled. $(END_COLOR)"
+	+@$(AR) $(NAME) $(OBJ)
+	+@echo "$(GREEN)$(NAME) compiled. $(END_COLOR)"
 
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c Makefile | $(BIN_DIR)
-	@$(CC) -c $(CFLAGS) -I $(INC_DIR) $< -o $@
-	@echo "$(BLUE)Compiling... $(notdir $<)$(END_COLOR)"
+	+@$(CC) -c $(CFLAGS) -I $(INC_DIR) $< -o $@
 
 $(BIN_DIR):
-	@mkdir $(BIN_DIR)
-	@echo "$(YELLOW)Created $(BIN_DIR)/ directory at libft/$(END_COLOR)"
+	+@mkdir $(BIN_DIR)
+	+@echo "$(YELLOW)Created $(BIN_DIR)/ directory at libft/$(END_COLOR)"
 
 clean:
-	@$(RM) $(BIN_DIR)
-	@echo "$(BLUE)$(NAME) object files and bin/ cleaned.$(END_COLOR)"
+	+@$(RM) $(BIN_DIR)
+	+@echo "$(BLUE)$(NAME) bin/ cleaned.$(END_COLOR)"
 
 fclean: clean
-	@$(RM) $(NAME)
-	@echo "$(YELLOW)$(NAME) .a file cleaned.$(END_COLOR)"
+	+@$(RM) $(NAME)
+	+@echo "$(YELLOW)$(NAME).a file cleaned.$(END_COLOR)"
 
 re: fclean all
-	@echo "$(GREEN)Cleaned all and rebuilt $(NAME)$(END_COLOR)"
+	+@echo "$(GREEN)Cleaned all and rebuilt $(NAME)$(END_COLOR)"
 
 # **************************************************************************** #
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
