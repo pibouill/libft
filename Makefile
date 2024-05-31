@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2024/05/28 12:34:02 by pibouill         ###   ########.fr        #
+#    Updated: 2024/05/31 12:45:37 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,7 +114,7 @@ clean:
 
 fclean: clean
 	+@$(RM) $(NAME)
-	+@echo "$(YELLOW)$(NAME).a file cleaned.$(END_COLOR)"
+	+@echo "$(YELLOW)$(NAME).a cleaned.$(END_COLOR)"
 
 re: fclean all
 	+@echo "$(GREEN)Cleaned all and rebuilt $(NAME)$(END_COLOR)"
