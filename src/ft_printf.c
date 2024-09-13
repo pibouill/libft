@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:42:15 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/27 13:38:41 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/09/13 10:29:15 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	count = 0;
 	if (format == NULL)
-		return (0);
+		return (-1);
 	while (*format)
 	{
 		if (*format == '%')
