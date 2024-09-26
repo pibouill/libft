@@ -6,14 +6,14 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:59:22 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/27 13:24:30 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/09/26 16:12:17 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Creates new string (*s1 + *s2)
+** Creates new string (s1 + s2)
 */
 
 char	*ft_strjoin(char const *s1, char const *s2)
