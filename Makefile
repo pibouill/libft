@@ -6,11 +6,12 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2024/09/16 11:04:38 by pibouill         ###   ########.fr        #
+#    Updated: 2024/09/27 12:26:29 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			= libft.a
+FT				= libft
 CC				= cc
 CFLAGS			= -Wall -Wextra -Werror
 RM 				= rm -rf
@@ -22,10 +23,17 @@ BIN_DIR			= bin
 # **************************************************************************** #
 # COLORS
 
-GREEN			= \033[0;92m
-YELLOW			= \033[0;93m
-BLUE			= \033[0;94m
-END_COLOR		= \033[0;39m
+RED				:=	[38;5;9m
+GREEN			:=	[38;5;10m
+BLUE			:= 	[38;5;14m
+YELLOW			:=	[38;5;226m
+RESET			:=	[38;5;7m
+PREFIX			=	[$(GREEN)$(FT)$(RESET)]\t\t\t\t
+
+#GREEN			= \033[0;92m
+#YELLOW			= \033[0;93m
+#BLUE			= \033[0;94m
+#END_COLOR		= \033[0;39m
 
 # **************************************************************************** #
 # SOURCES
@@ -99,25 +107,25 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	+@$(AR) $(NAME) $(OBJ)
-	+@echo "$(GREEN)$(NAME) compiled. $(END_COLOR)"
+	+@echo "$(PREFIX)$(NAME) compiled. $(END_COLOR)"
 
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c Makefile | $(BIN_DIR)
 	+@$(CC) -c $(CFLAGS) -I $(INC_DIR) $< -o $@
 
 $(BIN_DIR):
 	+@mkdir $(BIN_DIR)
-	+@echo "$(YELLOW)Created $(BIN_DIR)/ directory at libft/$(END_COLOR)"
+	+@echo "$(PREFIX)Created $(BIN_DIR)/ directory at libft/$(END_COLOR)"
 
 clean:
 	+@$(RM) $(BIN_DIR)
-	+@echo "$(BLUE)$(NAME) bin/ cleaned.$(END_COLOR)"
+	+@echo "$(PREFIX)$(NAME) bin/ cleaned.$(END_COLOR)"
 
 fclean: clean
 	+@$(RM) $(NAME)
-	+@echo "$(YELLOW)$(NAME).a cleaned.$(END_COLOR)"
+	+@echo "$(PREFIX)$(NAME).a cleaned.$(END_COLOR)"
 
 re: fclean all
-	+@echo "$(GREEN)Cleaned all and rebuilt $(NAME)$(END_COLOR)"
+	+@echo "$(PREFIX)Cleaned all and rebuilt $(NAME)$(END_COLOR)"
 
 # **************************************************************************** #
 
