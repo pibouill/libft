@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2024/09/27 12:26:29 by pibouill         ###   ########.fr        #
+#    Updated: 2024/09/27 12:39:00 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ GREEN			:=	[38;5;10m
 BLUE			:= 	[38;5;14m
 YELLOW			:=	[38;5;226m
 RESET			:=	[38;5;7m
-PREFIX			=	[$(GREEN)$(FT)$(RESET)]\t\t\t\t
+PREFIX			=	[$(GREEN)$(FT)$(RESET)]\t\t\t\t\t
 
 #GREEN			= \033[0;92m
 #YELLOW			= \033[0;93m
@@ -107,25 +107,25 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	+@$(AR) $(NAME) $(OBJ)
-	+@echo "$(PREFIX)$(NAME) compiled. $(END_COLOR)"
+	+@echo "$(PREFIX)$(NAME) compiled."
 
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c Makefile | $(BIN_DIR)
 	+@$(CC) -c $(CFLAGS) -I $(INC_DIR) $< -o $@
 
 $(BIN_DIR):
 	+@mkdir $(BIN_DIR)
-	+@echo "$(PREFIX)Created $(BIN_DIR)/ directory at libft/$(END_COLOR)"
+	+@echo "$(PREFIX)Created $(BIN_DIR)/ directory at libft/"
 
 clean:
 	+@$(RM) $(BIN_DIR)
-	+@echo "$(PREFIX)$(NAME) bin/ cleaned.$(END_COLOR)"
+	+@echo "$(PREFIX)$(NAME) bin/ cleaned."
 
 fclean: clean
 	+@$(RM) $(NAME)
-	+@echo "$(PREFIX)$(NAME).a cleaned.$(END_COLOR)"
+	+@echo "$(PREFIX)$(NAME).a cleaned."
 
 re: fclean all
-	+@echo "$(PREFIX)Cleaned all and rebuilt $(NAME)$(END_COLOR)"
+	+@echo "$(PREFIX)Cleaned all and rebuilt $(NAME)"
 
 # **************************************************************************** #
 
