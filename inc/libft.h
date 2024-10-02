@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/27 13:30:35 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/02 17:58:41 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,7 @@ int		ft_str_arr_len(char **ar);
 char	*get_next_line(int fd);
 int		ft_wordcount(const char *s, char c);
 int		ft_printf_fd(int fd, const char *format, ...);
+char	*ft_strndup(const char *s, int n);
 
 // HELPERS
 int		putchar_len(int c);
