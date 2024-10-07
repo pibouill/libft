@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:02:47 by pibouill          #+#    #+#             */
-/*   Updated: 2024/10/07 14:05:00 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/07 14:15:20 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr(int n);
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
 
 //	ADDITIONAL
 char	*ft_itoa(int n);
@@ -107,9 +110,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 // ADDITIONS
-void	ft_putnbr(int n);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
 int		ft_digitcount(long nb, int base, int sign);
 int		ft_printf(const char *format, ...);
 int		ft_intlen(int nbr);
