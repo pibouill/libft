@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_puts.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 17:55:35 by pibouill          #+#    #+#             */
-/*   Updated: 2024/10/07 10:54:50 by pibouill         ###   ########.fr       */
+/*   Created: 2024/10/07 11:14:38 by pibouill          #+#    #+#             */
+/*   Updated: 2024/10/07 14:04:19 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
-char	*ft_strndup(const char *s, int n)
+// passing NULL to puts() is undefined behavior (crash)
+
+int	ft_puts(const char *s)
 {
-	char	*new;
-	int		i;
+	int	i;
 
 	i = 0;
-	new = malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (new == NULL)
-		return (NULL);
-	while (*s && i < n)
-		new[i++] = *s++;
-	new[i] = '\0';
-	return (new);
+	while (s[i])
+		write(1, &s[i++], 1);
+	write(1, "\n", 1);
+	return (i + 1);
 }
