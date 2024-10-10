@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 13:16:36 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/24 13:56:41 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:06 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char	*clean_stash(char *stash)
 {

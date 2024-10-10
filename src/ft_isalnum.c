@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:18:17 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:36:40 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:15:56 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Returns 1 if c is alphanumerical

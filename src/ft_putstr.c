@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 15:33:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/29 15:36:06 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:05 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	ft_putstr(char *s)
 {

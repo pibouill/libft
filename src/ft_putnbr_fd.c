@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:27:44 by pibouill          #+#    #+#             */
-/*   Updated: 2023/11/09 17:41:17 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:05 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Writes int n to fd

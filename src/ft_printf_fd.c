@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 13:01:51 by pibouill          #+#    #+#             */
-/*   Updated: 2024/09/13 10:29:53 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:05 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/../inc/libft.h"
 
 static int	handle_format(char specifier, va_list arg, int fd)
 {

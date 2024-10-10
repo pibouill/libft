@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:34:10 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/27 11:48:47 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:15:54 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Allocates memory for nmemb elements of size bytes each

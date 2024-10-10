@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:23:39 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 12:31:17 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:05 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Writes *s to fd with newline

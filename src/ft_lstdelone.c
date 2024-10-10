@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:17:08 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 11:21:19 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:03 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Deletes and frees a node

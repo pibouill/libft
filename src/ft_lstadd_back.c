@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:05:57 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:39:16 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:02 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Adds the node new to the end of lst

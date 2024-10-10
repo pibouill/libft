@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:56:04 by pbouillo          #+#    #+#             */
-/*   Updated: 2023/10/22 15:36:56 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:15:56 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Returns 1 if c is a letter

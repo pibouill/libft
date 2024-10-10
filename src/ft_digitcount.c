@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 15:30:29 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/29 15:30:41 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:15:55 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** counts the number of digits of a number,

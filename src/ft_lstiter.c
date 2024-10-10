@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:34:52 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/23 12:21:26 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:03 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Applies f function to each node of lst

@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 11:42:32 by pibouill          #+#    #+#             */
-/*   Updated: 2024/03/06 11:59:08 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:15:55 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int	ft_intlen(int nbr)
 {

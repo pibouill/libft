@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:35:12 by pibouill          #+#    #+#             */
-/*   Updated: 2023/11/09 18:13:00 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:04 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Creates new node and sets its content

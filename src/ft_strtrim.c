@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:19:53 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/26 17:34:18 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:06 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Trims *s1 from chars in *set

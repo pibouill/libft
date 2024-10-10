@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 12:00:40 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/24 15:14:35 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:06 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int	ft_wordcount(const char *s, char c)
 {

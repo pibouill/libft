@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:27:32 by pibouill          #+#    #+#             */
-/*   Updated: 2023/10/22 15:49:25 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:04 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Copies n bytes from src to dest

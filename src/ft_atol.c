@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 15:38:01 by pibouill          #+#    #+#             */
-/*   Updated: 2024/04/21 14:21:14 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:15:50 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 long	ft_atol(const char *str)
 {

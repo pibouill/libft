@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:32:49 by pibouill          #+#    #+#             */
-/*   Updated: 2024/01/24 17:39:37 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:04 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	ft_print_bits(unsigned char octet)
 {

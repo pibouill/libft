@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:37:23 by pibouill          #+#    #+#             */
-/*   Updated: 2024/04/21 14:19:41 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:16:02 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Returns the (char *) representation of int n

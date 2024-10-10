@@ -6,11 +6,11 @@
 /*   By: pibouill <pibouill@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:40:26 by pibouill          #+#    #+#             */
-/*   Updated: 2024/05/31 15:46:46 by pibouill         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:15:47 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 static int	is_valid_char(char c)
 {
