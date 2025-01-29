@@ -97,7 +97,8 @@ SRC_FILES		=		ft_atoi\
 						ft_printf_fd\
 						ft_printf_fd_utils\
 						ft_strndup\
-						ft_puts
+						ft_puts\
+						ft_strfry
 
 SRC					= $(addprefix $(SRC_DIR)/, $(addsuffix .c, $(SRC_FILES)))
 OBJ 				= $(addprefix $(BIN_DIR)/, $(addsuffix .o, $(SRC_FILES)))
