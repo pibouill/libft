@@ -6,7 +6,7 @@
 /*   By: pibouill <pibouill@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 19:20:04 by pibouill          #+#    #+#             */
-/*   Updated: 2025/01/29 19:25:55 by pibouill         ###   ########.fr       */
+/*   Updated: 2025/01/29 19:53:36 by pibouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,41 @@
 // by randomly swapping characters in the string.
 // The result is an anagram of string.
 
-char	*ft_strfry(char *str)
+char	*ft_strfry(char *string)
 {
-	char	*new_str;
-	int		len;
-	int		i;
-	int		j;
+    size_t	len;
+	size_t	i;
+	size_t	j;
+	char	t;
 
-	len = ft_strlen(str);
-	new_str = (char *)malloc(sizeof(char) * len + 1);
-	if (!new_str)
-		return (NULL);
-	new_str[len] = '\0';
+	len = ft_strlen(string);
 	i = 0;
-	j = 0;
-	while (i < len)
+    if (len > 1)
 	{
-		if (str[i] != '\0')
+		while (i < len - 1)
 		{
-			new_str[j] = str[i];
-			str[i] = '\0';
-			j++;
-		}
-		i++;
-	}
-	return (new_str);
+            j = i + rand() / (RAND_MAX / (len - i) + 1);
+            t = string[j];
+            string[j] = string[i];
+            string[i] = t;
+			i++;
+        }
+    }
+    return string;
+}
+
+int	main()
+{
+	char	*str;
+
+	str = ft_strdup("Hello, World!");
+	ft_putstr("Original string: ");
+	ft_putstr(str);
+	ft_putstr("\n");
+	ft_strfry(str);
+	ft_putstr("Shuffled string: ");
+	ft_putstr(str);
+	ft_putstr("\n");
+	free(str);
+	return (0);
 }

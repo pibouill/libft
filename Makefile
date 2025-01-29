@@ -121,7 +121,7 @@ $(BIN_DIR):
 
 clean:
 	+@$(RM) $(BIN_DIR)
-	+@echo "$(PREFIX)Libft bin/ cleaned."
+	+@echo "$(PREFIX)libft bin/ cleaned."
 
 fclean: clean
 	+@$(RM) $(NAME)
