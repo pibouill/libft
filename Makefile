@@ -19,6 +19,8 @@ AR 				= ar rc
 SRC_DIR			= src
 INC_DIR			= inc
 BIN_DIR			= bin
+STATIC_ANALYZER	:=	scan-build --use-cc=clang -enable-checker alpha.core
+CLANG_TIDY		:=	clang-tidy --checks=clang-analyzer*,portability.* --warnings-as-errors=* --header-filter=.*
 
 # **************************************************************************** #
 # COLORS
@@ -129,6 +131,18 @@ fclean: clean
 
 re: fclean all
 	+@echo "$(PREFIX)Cleaned all and rebuilt $(NAME)"
+
+analyze: fclean
+	$(STATIC_ANALYZER) make
+	$(CLAING_TIDY) $(SRC) -- -Iinc -Ilibft/inc
+
+# static code analysis
+scan: fclean
+	$(STATIC_ANALYZER) make
+
+# code quality check
+tidy: fclean
+	$(CLANG_TIDY) $(SRC) -- -Iinc -Ilibft/inc
 
 # **************************************************************************** #
 

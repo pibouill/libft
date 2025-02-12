@@ -42,7 +42,7 @@ int	ft_printf_fd(int fd, const char *format, ...)
 	va_start(args, format);
 	count = 0;
 	if (format == NULL)
-		return (-1);
+		return (va_end(args), -1);
 	while (*format)
 	{
 		if (*format == '%')
