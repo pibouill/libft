@@ -18,7 +18,7 @@ RM 				= rm -rf
 AR 				= ar rc
 SRC_DIR			= src
 INC_DIR			= inc
-BIN_DIR			= bin
+OBJ_DIR			= obj
 STATIC_ANALYZER	:=	scan-build --use-cc=clang -enable-checker alpha.core
 CLANG_TIDY		:=	clang-tidy --checks=clang-analyzer*,portability.* --warnings-as-errors=* --header-filter=.*
 
@@ -103,7 +103,7 @@ SRC_FILES		=		ft_atoi\
 						ft_strfry
 
 SRC					= $(addprefix $(SRC_DIR)/, $(addsuffix .c, $(SRC_FILES)))
-OBJ 				= $(addprefix $(BIN_DIR)/, $(addsuffix .o, $(SRC_FILES)))
+OBJ 				= $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(SRC_FILES)))
 
 # **************************************************************************** #
 # RULES
@@ -114,16 +114,16 @@ $(NAME): $(OBJ)
 	+@$(AR) $(NAME) $(OBJ)
 	+@echo "$(PREFIX)$(NAME) compiled."
 
-$(BIN_DIR)/%.o: $(SRC_DIR)/%.c Makefile | $(BIN_DIR)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c Makefile | $(OBJ_DIR)
 	+@$(CC) -c $(CFLAGS) -I $(INC_DIR) $< -o $@
 
-$(BIN_DIR):
-	+@mkdir $(BIN_DIR)
-	+@echo "$(PREFIX)Created $(BIN_DIR)/ directory at libft/"
+$(OBJ_DIR):
+	+@mkdir $(OBJ_DIR)
+	+@echo "$(PREFIX)Created $(OBJ_DIR)/ directory at libft/"
 
 clean:
-	+@$(RM) $(BIN_DIR)
-	+@echo "$(PREFIX)libft bin/ cleaned."
+	+@$(RM) $(OBJ_DIR)
+	+@echo "$(PREFIX)libft obj/ cleaned."
 
 fclean: clean
 	+@$(RM) $(NAME)
