@@ -6,7 +6,7 @@
 #    By: pibouill <pibouill@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:56:08 by pibouill          #+#    #+#              #
-#    Updated: 2024/11/17 15:46:25 by pibouill         ###   ########.fr        #
+#    Updated: 2025/04/25 08:45:45 by pibouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,7 +100,8 @@ SRC_FILES		=		ft_atoi\
 						ft_printf_fd_utils\
 						ft_strndup\
 						ft_puts\
-						ft_strfry
+						ft_strfry\
+						ft_malloc
 
 SRC					= $(addprefix $(SRC_DIR)/, $(addsuffix .c, $(SRC_FILES)))
 OBJ 				= $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(SRC_FILES)))
