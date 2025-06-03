@@ -120,7 +120,7 @@ int		ft_wordcount(const char *s, char c);
 int		ft_printf_fd(int fd, const char *format, ...);
 char	*ft_strndup(const char *s, int n);
 int		ft_puts(const char *s);
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
+void	*ft_realloc(void *ptr, size_t size);
 
 // HELPERS
 int		putchar_len(int c);
